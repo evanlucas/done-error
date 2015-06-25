@@ -10,7 +10,7 @@ in something like a `mocha` test.
 ## Install
 
 ```bash
-$ npm install done-error
+$ npm install done-error --save-dev
 ```
 
 ## Usage
