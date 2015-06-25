@@ -1,0 +1,23 @@
+{
+  "name": "done-error",
+  "version": "1.0.0",
+  "description": "Verify that done is called with an error",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tap": "~1.3.1"
+  },
+  "license": "MIT",
+  "author": "Evan Lucas <evanlucas@me.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanlucas/done-error"
+  },
+  "homepage": "https://github.com/evanlucas/done-error",
+  "bugs": {
+    "url": "https://github.com/evanlucas/done-error/issues"
+  }
+}
