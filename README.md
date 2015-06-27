@@ -26,6 +26,16 @@ describe('test', function() {
   it('should return an error', function(done) {
     test(doneError(done))
   })
+
+  it('also can equal an error message', function(done) {
+    // this should pass
+    test(doneError(done, 'This is an error'))
+  })
+
+  it('also can match an error message', function(done) {
+    // this should pass
+    test(doneError(done, /This/))
+  })
 })
 ```
 

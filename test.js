@@ -51,8 +51,34 @@ test('should fail for objects', function(t) {
   })
 })
 
-function helper(arg) {
+test('should work with optional message', function(t) {
+  t.plan(3)
+  var err = new Error('Error message')
+  helper(err, 'Error message')(function(err) {
+    t.equal(err, undefined)
+  })
+
+  helper(err, 'ERR')(function(err) {
+    t.equal(err instanceof Error, true, 'err should be an error')
+    t.equal(err.message, 'Expected: ERR Actual: Error message')
+  })
+})
+
+test('should work when optional message is a RegExp', function(t) {
+  t.plan(3)
+  var err = new Error('Error message')
+  helper(err, /Error message/)(function(err) {
+    t.equal(err, undefined)
+  })
+
+  helper(err, /ERR/)(function(err) {
+    t.equal(err instanceof Error, true, 'err should be an error')
+    t.equal(err.message, 'Match: /ERR/ Actual: Error message')
+  })
+})
+
+function helper(arg, msg) {
   return function(cb) {
-    lib(cb)(arg)
+    lib(cb, msg)(arg)
   }
 }
