@@ -1,6 +1,6 @@
 {
   "name": "done-error",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Verify that done is called with an error",
   "main": "index.js",
   "scripts": {
