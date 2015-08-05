@@ -1,6 +1,7 @@
 # done-error
 
 [![Build Status](https://travis-ci.org/evanlucas/done-error.svg)](https://travis-ci.org/evanlucas/done-error)
+[![Coverage Status](https://coveralls.io/repos/evanlucas/done-error/badge.svg?branch=master&service=github)](https://coveralls.io/github/evanlucas/done-error?branch=master)
 
 Verify that done is called with an error.
 
@@ -11,6 +12,18 @@ in something like a `mocha` test.
 
 ```bash
 $ npm install done-error --save-dev
+```
+
+## Test
+
+```bash
+$ npm test
+```
+
+## Coverage
+
+```bash
+$ npm test -- --cov
 ```
 
 ## Usage
