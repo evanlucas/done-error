@@ -10,7 +10,7 @@ test('should work for errors', function(t) {
 })
 
 test('should fail for primitives', function(t) {
-  t.plan(6)
+  t.plan(8)
   helper(false)(function(err) {
     t.equal(err instanceof Error, true, 'err should be an error')
     t.equal(err.message, 'Expected Error but got boolean')
@@ -24,6 +24,11 @@ test('should fail for primitives', function(t) {
   helper('1')(function(err) {
     t.equal(err instanceof Error, true, 'err should be an error')
     t.equal(err.message, 'Expected Error but got string')
+  })
+
+  helper(null)(function(err) {
+    t.equal(err instanceof Error, true, 'err should be an error')
+    t.equal(err.message, 'Expected Error but got null')
   })
 })
 
