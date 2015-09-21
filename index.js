@@ -31,12 +31,8 @@ function getType(err) {
   if (isPrimitive(err))
     return typeof err
 
-  if (err.constructor) {
-    if (err.constructor.name === 'Object') return 'object'
-    return err.constructor.name
-  }
-
-  return err
+  if (err.constructor.name === 'Object') return 'object'
+  return err.constructor.name
 }
 
 function isPrimitive(arg) {
