@@ -33,6 +33,7 @@ test('should fail for primitives', function(t) {
 })
 
 test('should fail for objects', function(t) {
+  t.plan(8)
   helper({})(function(err) {
     t.equal(err instanceof Error, true, 'err should be an error')
     t.equal(err.message, 'Expected Error but got object')
