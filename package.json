@@ -4,7 +4,7 @@
   "description": "Verify that done is called with an error",
   "main": "index.js",
   "scripts": {
-    "test": "tap test.js"
+    "test": "tap test.js --cov"
   },
   "dependencies": {},
   "devDependencies": {
